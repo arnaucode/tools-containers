@@ -8,7 +8,7 @@ Set of tools inside Docker containers, using docker-compose.
 - [x] mumble (murmur) (https://www.mumble.com/)
 - [ ] etherpad (http://etherpad.org/) / cryptopad
 - [ ] nextcloud
-- [ ] dudle (https://github.com/kellerben/dudle/)
+- [x] dudle (https://github.com/kellerben/dudle/)
 - [ ] matrix/rocketchat
 - [ ] draw.io
 
@@ -27,6 +27,8 @@ Ports:
   - 4001
 - etherpad
   - 4002
+- dudle
+  - 4003
 
 
 In the directory /launcher there is a webapp with links to all the services.

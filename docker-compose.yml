@@ -10,6 +10,7 @@ services:
      - kanboard_data:/var/www/app/data
      - kanboard_plugins:/var/www/app/plugins
      - kanboard_ssl:/etc/nginx/ssl
+
   postgres:
       image: postgres:9.5
       restart: always
@@ -22,6 +23,7 @@ services:
        - "db-data:/var/lib/postgresql/data"
       networks:
        - gogs
+
   gogs:
     image: gogs/gogs:latest
     restart: always
@@ -45,6 +47,12 @@ services:
       - "64738:64738/tcp"
       - "64738:64738/udp"
     restart: always
+
+  dudle:
+    image: jaydee2202/dudle
+    restart: always
+    ports:
+     - "4003:80"
 
   launcher:
       build: ./launcher

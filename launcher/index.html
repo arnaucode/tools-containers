@@ -9,33 +9,44 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
+  <link href="node_modules/cssmaterialcolors/colors.css" rel="stylesheet">
   <title>Launcher</title>
 </head>
 
 <body>
-  <br><br><br>
+  <nav class="navbar navbar-light c_indigoG500to300">
+    <a class="navbar-brand" href="#">tools-containers - Launcher</a>
+  </nav>
+  <br><br>
   <div class="container">
+    <h1>tools-containers - Launcher</h1>
+    <br><br>
     <h3>Web Apps</h3>
     <hr>
     <div class="row">
       <div class="col-sm-2">
-        <a href="http://127.0.0.1:4002" target="_blank" class="btn btn-outline-info">
+        <a href="http://127.0.0.1:4002" target="_blank" class="btn btn-outline-info" data-toggle="tooltip" data-placement="bottom" title="etherpad">
           <img src="img/etherpad.png" style="max-width:100px;" alt="etherpad" title="etherpad">
         </a>
       </div>
       <div class="col-sm-2">
-        <a href="http://127.0.0.1:4001" target="_blank" class="btn btn-outline-info">
+        <a href="http://127.0.0.1:4001" target="_blank" class="btn btn-outline-info" data-toggle="tooltip" data-placement="bottom" title="kanboard">
           <img src="img/kanboard.png" style="max-width:100px;" alt="kanboard" title="kanboard">
         </a>
       </div>
       <div class="col-sm-2">
-        <a href="http://127.0.0.1:4000" target="_blank" class="btn btn-outline-info">
+        <a href="http://127.0.0.1:4000" target="_blank" class="btn btn-outline-info" data-toggle="tooltip" data-placement="bottom" title="gogs">
           <img src="img/gogs.png" style="max-width:100px;" alt="gogs" title="gogs">
         </a>
       </div>
       <div class="col-sm-2">
-        <a href="http://127.0.0.1:4000" target="_blank" class="btn btn-outline-info">
+        <a href="http://127.0.0.1:4000" target="_blank" class="btn btn-outline-info" data-toggle="tooltip" data-placement="bottom" title="nextcloud">
           <img src="img/nextcloud.png" style="max-width:100px;" alt="nextcloud" title="nextcloud">
+        </a>
+      </div>
+      <div class="col-sm-2">
+        <a href="http://127.0.0.1:4003" target="_blank" class="btn btn-outline-info" data-toggle="tooltip" data-placement="bottom" title="dudle">
+          <img src="img/dudle.png" style="max-width:100px;" alt="dudle" title="dudle">
         </a>
       </div>
     </div>
@@ -45,9 +56,13 @@
     <hr>
     <div class="row">
       <div class="col-sm-2">
-        <a href="http://127.0.0.1:64738" target="_blank" class="btn btn-outline-secondary">
+        <!-- <a href="http://127.0.0.1:64738" target="_blank" class="btn btn-outline-secondary">
           <img src="img/mumble.png" style="max-width:100px;" alt="mumble" title="mumble">
-        </a>
+        </a> -->
+        <button type="button" class="btn btn-outline-secondary" data-toggle="popover" title="Mumble (Murmur server)" data-content="Service running at port 64738" data-placement="bottom">
+          <img src="img/mumble.png" style="max-width:100px;" alt="mumble" title="mumble">
+        </button>
+
       </div>
     </div>
   </div>
@@ -57,6 +72,15 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 </body>
 
 </html>
