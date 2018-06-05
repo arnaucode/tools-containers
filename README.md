@@ -3,19 +3,26 @@
 Set of tools inside Docker containers, using docker-compose.
 
 ### Current tools
-- [x] gitlab / gogs (https://gogs.io/) / gitea (https://gitea.io)
+- [x] git
+  - [ ] gitlab
+  - [x] gogs (https://gogs.io/)
+  - [x] gitea (https://gitea.io)
 - [x] kanboard (https://kanboard.org/)
 - [x] mumble (murmur) (https://www.mumble.com/)
-- [ ] etherpad (http://etherpad.org/) / cryptopad
+- [ ] collaborative pads
+  - [ ] etherpad (http://etherpad.org/)
+  - [ ] cryptopad
 - [ ] nextcloud
 - [x] dudle (https://github.com/kellerben/dudle/)
-- [ ] matrix/rocketchat
-- [ ] draw.io
+- [ ] chat
+  - [ ] matrix
+  - [ ] rocketchat
+- [x] draw.io
 
 
 Run with
 ```
-POSTGRES_USER=user1 POSTGRES_PASSWORD=user1 docker-compose up
+docker-compose up
 ```
 
 Ports:
@@ -29,6 +36,10 @@ Ports:
   - 4002
 - dudle
   - 4003
+- draw
+  - 4004
+- gitea
+  - 4005
 
 
 In the directory /launcher there is a webapp with links to all the services.
